@@ -1,0 +1,58 @@
+html {
+    background: #ecf0f1;
+}
+
+body, h1, h2 {
+    font-family: Helvetica, Sans-serif;
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 36px;
+    opacity: 0;
+    margin-top: 100px;
+    animation: appear 1s 3s forwards;
+}
+
+.container {
+    margin: 4em;
+    text-align: center;
+}
+
+#loader {
+    border: 16px solid rgb(155, 155, 155);
+    border-top-color: #06daaf;
+    border-bottom-color: #e73f3f;
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-top: 100px;
+    animation: loading 1.6s infinite linear;
+}
+
+@keyframes loading {
+    /* it s optional in this case */
+    0% {}
+    
+    50% {
+        transform: rotate(180deg) scale(1.05);
+    }
+    
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
