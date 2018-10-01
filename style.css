@@ -8,6 +8,7 @@ body, h1, h2 {
     margin: 0;
     padding: 0;
     font-weight: 300;
+    /* min-width:420px; */
 }
 
 h1 {
@@ -41,11 +42,9 @@ h2 {
 @keyframes loading {
     /* it s optional in this case */
     0% {}
-    
     50% {
         transform: rotate(180deg) scale(1.05);
     }
-    
     100% {
         transform: rotate(360deg) scale(1);
     }
@@ -54,5 +53,23 @@ h2 {
 @keyframes appear {
     to {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width:700px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 20px;
     }
 }
